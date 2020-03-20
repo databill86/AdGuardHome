@@ -175,7 +175,7 @@ func run(args options) {
 	initConfig()
 
 	Context.tlsRoots = util.LoadSystemRootCAs()
-	Context.tlsRoots = util.InitTLSCiphers()
+	Context.tlsCiphers = util.InitTLSCiphers()
 	Context.transport = &http.Transport{
 		DialContext: customDialContext,
 		Proxy:       getHTTPProxy,
